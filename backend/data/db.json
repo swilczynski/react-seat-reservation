@@ -1,0 +1,33 @@
+{
+    "sectors": [
+        {
+            "sectorMapUrl": "sectors/sector.svg",
+            "seatPrices": {
+                "default": 99,
+                "seat-no-118": 129,
+                "seat-no-107": 129
+            }
+        }
+    ],
+    "reservations": [
+        {
+            "selectedSeats": [
+                {
+                    "id": "seat-no-3",
+                    "number": "3",
+                    "price": 99
+                },
+                {
+                    "id": "seat-no-108",
+                    "number": "108",
+                    "price": 99
+                },
+                {
+                    "id": "seat-no-85",
+                    "number": "85",
+                    "price": 99
+                }
+            ]
+        }
+    ]
+}

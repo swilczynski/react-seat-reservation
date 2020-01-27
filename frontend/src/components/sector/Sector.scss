@@ -1,0 +1,78 @@
+.sector-container {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+
+    .legend {
+        flex: 1;
+        align-self: flex-end;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            svg {
+                width: 50px;
+
+                g {
+                    rect {
+                        fill: #fff;
+                        stroke: #000;
+                    }
+                }
+            }
+
+            &.occupied {
+                svg {
+                    g {
+                        rect {
+                            fill: #ed1a4c;
+                        }
+                    }
+                }
+            }
+
+            &.selected {
+                svg {
+                    g {
+                        rect {
+                            fill: #febc11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sector {
+        flex: 1;
+
+        span {
+            display: block;
+            overflow: hidden;
+            text-indent: -999px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            rect {
+                fill: #fff;
+                stroke: #000;
+
+                &:hover,
+                &.selected {
+                    fill: #febc11;
+                    cursor: pointer;
+                }
+
+                &.reserved {
+                    fill: #ed1a4c;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

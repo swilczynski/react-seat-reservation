@@ -1,0 +1,14 @@
+{
+    "name": "backend",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "nodemon start"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "lowdb": "^1.0.0",
+        "nedb-promises": "^4.0.0",
+        "nodemon": "^2.0.1"
+    }
+}

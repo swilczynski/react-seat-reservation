@@ -1,0 +1,25 @@
+version: "3"
+services:
+    frontend:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./frontend/src:/usr/app/src
+            - ./frontend/public:/usr/app/public
+        environment:
+            - REACT_APP_API_URL=http://${DOCKER_MACHINE_IP}:3100
+            - CHOKIDAR_USEPOLLING=true
+    backend:
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        ports:
+            - "3100:3100"
+        volumes:
+            - ./backend/src:/usr/app/src
+            - ./backend/data:/usr/app/data
+        environment:
+            - CHOKIDAR_USEPOLLING=true
